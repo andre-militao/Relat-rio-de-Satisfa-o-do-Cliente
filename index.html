@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Atendimento - União Supermercados</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container fade-in">
+
+    <header>
+      <h1>Relatório de Satisfação do Cliente</h1>
+      <p>Data: <span id="dataAtual"></span></p>
+      <div class="period-buttons">
+        <button onclick="alterarPeriodo('hoje')" class="btn-hover">Hoje</button>
+        <button onclick="alterarPeriodo('semana')" class="btn-hover">Última Semana</button>
+        <button onclick="alterarPeriodo('mes')" class="btn-hover">Último Mês</button>
+      </div>
+    </header>
+
+    <section id="resumo">
+      <h2>Satisfação Geral</h2>
+      <canvas id="graficoSatisfacao"></canvas>
+      <p id="percentualSatisfacao">85% Satisfeito</p>
+    </section>
+
+    <section id="indicadores">
+      <h2>Indicadores de Satisfação</h2>
+      <div class="indicador slide-up">Tempo Médio de Espera nas Filas: <span>5 min</span></div>
+      <div class="indicador slide-up">Disponibilidade de Produtos: <span>90%</span></div>
+      <div class="indicador slide-up">Atendimento: <span>4.5 / 5</span></div>
+      <div class="indicador slide-up">Limpeza e Organização: <span>4.7 / 5</span></div>
+    </section>
+
+    <section id="comentarios">
+      <h2>Comentários Recentes</h2>
+      <ul>
+        <li class="fade-in">"Muito bom atendimento!"</li>
+        <li class="fade-in">"A fila estava um pouco longa."</li>
+        <li class="fade-in">"Encontrei tudo o que precisava."</li>
+      </ul>
+    </section>
+
+    <section id="tendencias">
+      <h2>Tendência de Satisfação</h2>
+      <canvas id="graficoTendencias"></canvas>
+    </section>
+
+    <section id="alertas">
+      <h2>Alertas e Recomendações</h2>
+      <p>Atenção: Disponibilidade de Produtos baixa em algumas áreas.</p>
+      <p>Sugestão: Considere abrir um caixa adicional durante o pico da manhã.</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
